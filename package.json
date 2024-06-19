@@ -1,0 +1,34 @@
+{
+  "name": "enter-as-tab-js",
+  "version": "0.0.1",
+  "main": "enterastab.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  },
+  "keywords": [
+    "enter",
+    "tabulation",
+    "enter as tab",
+    "enter tabulation"
+  ],
+  "homepage": "https://github.com/everton3x/enter-as-tab-js#readme",
+  "bugs": {
+    "url": "https://github.com/everton3x/enter-as-tab-js/issues"
+  },
+  "author": {
+    "name": "Everton da Rosa",
+    "url": "https://github.com/everton3x",
+    "email": "everton3x@gmail.com"
+  },
+  "license": "MIT",
+  "description": "Library to transform enter into tab in your web applications.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/everton3x/enter-as-tab-js.git"
+  }
+}

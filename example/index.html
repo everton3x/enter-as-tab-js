@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css">
+
+  <title>Enter As Tab example</title>
+</head>
+
+<body>
+
+  <br>
+  <br>
+  <br>
+
+  <div class="ui green segment container">
+    <div class="ui header">Enter As Tab basic sample</div>
+    <div class="ui info message">
+      <p>This example shows how to use EnterAsTab.js with the default options.</p>
+    </div>
+    <form id="myform1" class="ui form">
+      <div class="field">
+        <label>Text Entry</label>
+        <input type="text" name="text" data-east>
+      </div>
+      <div class="field">
+        <label>Number Entry</label>
+        <input type="number" name="number" data-east>
+      </div>
+      <div class="field">
+        <label>Text</label>
+        <textarea rows="3" data-east></textarea>
+      </div>
+      <div class="field">
+        <select data-east>
+          <option value="">Gender</option>
+          <option value="1">Male</option>
+          <option value="0">Female</option>
+        </select>
+      </div>
+
+      <div class="ui checkbox">
+        <input type="checkbox" name="example" data-east>
+        <label>Make my profile visible</label>
+      </div>
+
+      <div class="ui form">
+        <div class="inline fields">
+          <label>How often do you use checkboxes?</label>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="frequency" checked="checked" data-east>
+              <label>Once a week</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="frequency">
+              <label>2-3 times a week</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="frequency">
+              <label>Once a day</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="frequency">
+              <label>Twice a day</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="ui primary button" data-east>Submit</button>
+    </form>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+  <div class="ui blue segment container">
+    <div class="ui header">Enter As Tab sample: using tabindex</div>
+    <div class="ui info message">
+      <p>Instead of using the order of the provided list of elements, you can use a custom order through the tabindex attribute.</p>
+    </div>
+    <form id="myform2" class="ui form">
+      <div class="field">
+        <label>#1 field</label>
+        <input type="text" name="text" data-east tabindex="0">
+      </div>
+      <div class="field">
+        <label>#3 field</label>
+        <input type="number" name="number" data-east tabindex="2">
+      </div>
+      <div class="field">
+        <label>#2 field</label>
+        <textarea rows="3" data-east tabindex="1"></textarea>
+      </div>
+      <div class="field">
+        <label>#4 field</label>
+        <select data-east tabindex="3">
+          <option value="">Gender</option>
+          <option value="1">Male</option>
+          <option value="0">Female</option>
+        </select>
+      </div>
+
+      <button class="ui primary button" data-east tabindex="4">Submit</button>
+    </form>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+  <div class="ui teal segment container">
+    <div class="ui header">Enter As Tab sample: using data-is-action</div>
+    <div class="ui info message">
+      <p>The default is to consider buttons as an action element, so, although they appear in the list of elements, they are normally activated when they have focus and enter is pressed.</p>
+      <p>With the <code class="ui label">autoDetectAction(false)</code> setting, only those that have the <code class="ui label">data-is-action</code> attribute will be considered as action elements.</p>
+    </div>
+    <form id="myform3" class="ui form">
+      <div class="field">
+        <label>Text Entry</label>
+        <input type="text" name="text" data-east placeholder="Entry data here to test reset button!">
+      </div>
+      <div class="field">
+        <label>Number Entry</label>
+        <input type="number" name="number" data-east>
+      </div>
+      <div class="field">
+        <label>Text</label>
+        <textarea rows="3" data-east></textarea>
+      </div>
+      <div class="field">
+        <select data-east>
+          <option value="">Gender</option>
+          <option value="1">Male</option>
+          <option value="0">Female</option>
+        </select>
+      </div>
+
+      <button class="ui basic button" type="reset" data-east>Reset</button>
+      <a class="ui primary button" data-east data-is-action href="javascript:alert('Submitted!');">Submit</a>
+    </form>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+  <div class="ui orange segment container">
+    <div class="ui header">Enter As Tab sample: cyclic fields</div>
+    <div class="ui info message">
+      <p>The default behavior is, when you reach the end of the list of elements, nothing else happens.</p>
+      <p>However, if you use <code class="ui label">cyclic(true)</code>, when you reach the last field (as long as it is not an action element), the focus will go to the first element in the list.</p>
+      <p>For this to work, there must be no action elements in the element list passed to the <code class="ui label">enterastab</code> function.</p>
+    </div>
+    <form id="myform4" class="ui form">
+      <div class="field">
+        <label>Text Entry</label>
+        <input type="text" name="text" data-east>
+      </div>
+      <div class="field">
+        <label>Number Entry</label>
+        <input type="number" name="number" data-east>
+      </div>
+      <div class="field">
+        <label>Text</label>
+        <textarea rows="3" data-east></textarea>
+      </div>
+      <div class="field">
+        <select data-east>
+          <option value="">Gender</option>
+          <option value="1">Male</option>
+          <option value="0">Female</option>
+        </select>
+      </div>
+
+      <button class="ui primary button">Submit</button>
+    </form>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+  <div class="ui violet segment container">
+    <div class="ui header">Enter As Tab sample: select strategy new line</div>
+    <div class="ui info message">
+      <p>The default behavior in textarea is to advance to the next element.</p>
+      <p>However, we can change this through the <code class="ui label">textAreaStrategy</code> directive. It can receive one of 3 values: <code class="ui label">tab</code> (the default), <code class="ui label">new line</code>, or <code class="ui label">ctrl+enter</code>.</p>
+      <p><code class="ui label">new line</code>, maintains the default behavior of the enter key (only within the <code class="ui label">textarea</code>).</p>
+      <p>Using <code class="ui label">ctrl+enter</code> will leave the tab behavior when enter is pressed in the <code class="ui label">textarea</code>. However, if the ctrl+enter combination is pressed, a new line will be added.</p>
+      <p>Here we use <code class="ui label">new line</code>.</p>
+    </div>
+    <form id="myform5" class="ui form">
+      <div class="field">
+        <label>Text Entry</label>
+        <input type="text" name="text" data-east>
+      </div>
+      <div class="field">
+        <label>Number Entry</label>
+        <input type="number" name="number" data-east>
+      </div>
+      <div class="field">
+        <label>Text</label>
+        <textarea rows="3" data-east></textarea>
+      </div>
+      <div class="field">
+        <select data-east>
+          <option value="">Gender</option>
+          <option value="1">Male</option>
+          <option value="0">Female</option>
+        </select>
+      </div>
+
+      <button class="ui primary button" data-east>Submit</button>
+    </form>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+  <div class="ui purple segment container">
+    <div class="ui header">Enter As Tab sample: select strategy ctrl+enter</div>
+    <div class="ui info message">
+      <p>Here we use <code class="ui label">ctrl+enter</code>.</p>
+    </div>
+    <form id="myform6" class="ui form">
+      <div class="field">
+        <label>Text Entry</label>
+        <input type="text" name="text" data-east>
+      </div>
+      <div class="field">
+        <label>Number Entry</label>
+        <input type="number" name="number" data-east>
+      </div>
+      <div class="field">
+        <label>Long Text</label>
+        <div class="ui pointing below label">ctrl+enter to new line</div>
+        <textarea rows="3" data-east></textarea>
+      </div>
+      <div class="field">
+        <select data-east>
+          <option value="">Gender</option>
+          <option value="1">Male</option>
+          <option value="0">Female</option>
+        </select>
+      </div>
+
+      <button class="ui primary button" data-east>Submit</button>
+    </form>
+  </div>
+
+  <!-- You MUST include jQuery 3.4+ before Fomantic -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
