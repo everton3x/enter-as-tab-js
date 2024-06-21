@@ -1,4 +1,4 @@
-import enterastab from "enter-as-tab";
+import enterastab from "enter-as-tab-js";
 
 const elements1 = document.getElementById('myform1').querySelectorAll('[data-east]');
 enterastab(elements1).init();

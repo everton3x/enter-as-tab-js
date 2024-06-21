@@ -33,7 +33,7 @@ See de `example` directory to samples of use.
 To run examples, does:
 
 ```
-cd examples/basic #or cd examples/advanced
+cd example
 npm install
 npm run dev --host
 ```
